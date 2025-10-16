@@ -76,7 +76,6 @@ sku, name, brand, color, size, mrp, price, quantity
 ├── server.js              # App entrypoint (loads env, connects DB, starts server)
 ├── .env                   # Contains MONGODB_URI and PORT
 └── package.json
-
 ---
 
 ## 🧠 How It Works
