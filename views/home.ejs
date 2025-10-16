@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Streamoid Product Manager</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🛍️ Streamoid Product Catalog</h1>
+
+    <div class="upload-section">
+      <h2>📤 Upload CSV</h2>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".csv" required>
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+
+    <% if (message) { %>
+      <p class="message"><%= message %></p>
+    <% } %>
+    <% if (error) { %>
+      <pre class="error"><%= error %></pre>
+    <% } %>
+
+    <hr>
+
+    <div class="filter-section">
+      <h2>🔍 Filter Products <h4>(for listing all products simply click on search button)</h4></h2>
+      <form action="/search" method="GET" class="filter-form">
+        <input type="text" name="brand" placeholder="Brand">
+        <input type="text" name="color" placeholder="Color">
+        <input type="number" name="minPrice" placeholder="Min Price">
+        <input type="number" name="maxPrice" placeholder="Max Price">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <div class="table-section">
+      <h2>📦 Product List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Color</th>
+            <th>Size</th>
+            <th>MRP</th>
+            <th>Price</th>
+            <th>Qty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if (products.length === 0) { %>
+            <tr><td colspan="8" class="empty">No products found.</td></tr>
+          <% } else { %>
+            <% products.forEach(p => { %>
+              <tr>
+                <td><%= p.sku %></td>
+                <td><%= p.name %></td>
+                <td><%= p.brand %></td>
+                <td><%= p.color || '-' %></td>
+                <td><%= p.size || '-' %></td>
+                <td>₹<%= p.mrp %></td>
+                <td>₹<%= p.price %></td>
+                <td><%= p.quantity %></td>
+              </tr>
+            <% }) %>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
