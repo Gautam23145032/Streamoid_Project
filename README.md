@@ -53,29 +53,44 @@ sku, name, brand, color, size, mrp, price, quantity
 
 ## 📁 Project Structure
 
-📦 streamoid-product-manager
-├── 📁 config
-│ └── db.js                # MongoDB connection logic
-├── 📁 controllers
-│ └── viewController.js    # Handles CSV upload, validation, search, rendering
-├── 📁 middleware
-│ ├── errorMiddleware.js   # 404 + global error handlers
-│ └── upload.js            # Multer config for CSV upload
-├── 📁 models
-│ └── productModel.js      # Product schema definition (Mongoose)
-├── 📁 routes
-│ └── viewRoutes.js        # Routes for upload, search, and render
-├── 📁 utils
-│ └── csvValidator.js      # Validates each CSV row before insertion
-├── 📁 views
-│ └── home.ejs             # EJS view for upload + search + listing UI
+📦 streamoid-product
+├── 📁 node_modules
+│
 ├── 📁 public
-│ └── style.css            # Styling for UI
-├── 📁 uploads            # Temporary folder for uploaded CSVs (auto-deleted)
-├── app.js                 # Express app setup
-├── server.js              # App entrypoint (loads env, connects DB, starts server)
-├── .env                   # Contains MONGODB_URI and PORT
-└── package.json
+│   └── 🎨 style.css
+│
+├── 📁 src
+│   ├── 📁 config
+│   │   └── db.js                # MongoDB connection logic
+│   │
+│   ├── 📁 controllers
+│   │   └── viewController.js    # Handles CSV upload, validation, search, rendering
+│   │
+│   ├── 📁 middleware
+│   │   ├── errorMiddleware.js   # 404 + global error handlers
+│   │   └── upload.js            # Multer config for CSV upload
+│   │
+│   ├── 📁 models
+│   │   └── productModel.js      # Mongoose schema for products
+│   │
+│   ├── 📁 routes
+│   │   └── viewRoutes.js        # Route definitions for CSV and product views
+│   │
+│   ├── 📁 utils
+│   │   └── csvValidator.js      # Helper for validating CSV data
+│   │
+│   ├── app.js                   # Express app setup, middleware config
+│   └── server.js                # Entry point – starts the server
+│
+├── 📁 uploads                  # Temporary folder for uploaded CSV files
+│
+├── 📁 views
+│   └── 🪟 index.ejs             # Home page
+│
+├── ⚙️ .env                      # Environment variables (DB URI, port, etc.)
+├── 📄 package-lock.json
+└── 📄 package.json
+
 ---
 
 ## 🧠 How It Works
