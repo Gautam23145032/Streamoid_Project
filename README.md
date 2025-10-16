@@ -128,47 +128,45 @@ SKU123,Running Shoes,Nike,Black,42,5999,4999,10
 SKU124,T-Shirt,Adidas,White,L,1999,1499,20
 SKU125,Jeans,Levis,Blue,32,3999,2999,15
 
-🌐 User Interface
+## 🌐 User Interface
 Home page contains:
 
 - CSV upload section
-
 - Search/filter section
-
 - Product listing table
-
 - Success and error messages shown dynamically
-
 - Clean responsive UI built with CSS
 
-🚀 Installation & Setup
-- Clone the repository
-git clone [https://github.com/yourusername/streamoid-product.git](https://github.com/Gautam23145032/Streamoid_Project)
-cd streamoid-product
+---
 
-- Install dependencies
-npm install
+## 🚀 Installation & Setup
+- Clone the repository  
+  git clone https://github.com/Gautam23145032/Streamoid_Project.git  
+  cd streamoid-product  
 
-- Create .env file
+- Install dependencies  
+  npm install  
 
-MONGODB_URI=<your-mongodb-connection-string>
-PORT=8000
-- Start server
+- Create .env file  
+  MONGODB_URI=<your-mongodb-connection-string>  
+  PORT=8000  
 
-npm start
-- Open in browser
+- Start server  
+  npm start  
 
-http://localhost:8000
+- Open in browser  
+  http://localhost:8000  
 
-💡 Developer Notes
-- Uploaded CSVs are stored temporarily and deleted automatically
+---
 
-- Failed rows are not inserted and are displayed in the UI
-
-- MongoDB text index ensures faster searches for name, brand, and color
-
+## 💡 Developer Notes
+- Uploaded CSVs are stored temporarily and deleted automatically  
+- Failed rows are not inserted and are displayed in the UI  
+- MongoDB text index ensures faster searches for name, brand, and color  
 - Works fully with server-side rendering (no frontend frameworks needed)
 
-👨‍💻 Author
-Gautam Yadav
-Made with 💙 by Gautam23145032
+---
+
+## 👨‍💻 Author
+Gautam Yadav  
+Made with 💙 by [Gautam23145032](https://github.com/Gautam23145032)
