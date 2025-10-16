@@ -123,11 +123,12 @@ A modern **Product Management Web App** built using **Node.js, Express, MongoDB,
 
 ## 📦 Example CSV File
 csv
+```
 sku,name,brand,color,size,mrp,price,quantity
 SKU123,Running Shoes,Nike,Black,42,5999,4999,10
 SKU124,T-Shirt,Adidas,White,L,1999,1499,20
 SKU125,Jeans,Levis,Blue,32,3999,2999,15
-
+```
 ## 🌐 User Interface
 Home page contains:
 
