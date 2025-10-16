@@ -54,24 +54,24 @@ sku, name, brand, color, size, mrp, price, quantity
 ## 📁 Project Structure
 
 📦 streamoid-product-manager
-├── config
+├── 📁 config
 │ └── db.js                # MongoDB connection logic
-├── controllers
+├── 📁 controllers
 │ └── viewController.js    # Handles CSV upload, validation, search, rendering
-├── middleware
+├── 📁 middleware
 │ ├── errorMiddleware.js   # 404 + global error handlers
 │ └── upload.js            # Multer config for CSV upload
-├── models
+├── 📁 models
 │ └── productModel.js      # Product schema definition (Mongoose)
-├── routes
+├── 📁 routes
 │ └── viewRoutes.js        # Routes for upload, search, and render
-├── utils
+├── 📁 utils
 │ └── csvValidator.js      # Validates each CSV row before insertion
-├── views
+├── 📁 views
 │ └── home.ejs             # EJS view for upload + search + listing UI
-├── public
+├── 📁 public
 │ └── style.css            # Styling for UI
-├── uploads            # Temporary folder for uploaded CSVs (auto-deleted)
+├── 📁 uploads            # Temporary folder for uploaded CSVs (auto-deleted)
 ├── app.js                 # Express app setup
 ├── server.js              # App entrypoint (loads env, connects DB, starts server)
 ├── .env                   # Contains MONGODB_URI and PORT
