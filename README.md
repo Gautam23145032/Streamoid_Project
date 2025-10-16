@@ -52,7 +52,7 @@ A modern **Product Management Web App** built using **Node.js, Express, MongoDB,
 ---
 
 ## 📁 Project Structure
-
+```
 📦 streamoid-product
 ├── 📁 node_modules
 │
@@ -90,7 +90,7 @@ A modern **Product Management Web App** built using **Node.js, Express, MongoDB,
 ├── ⚙️ .env                      # Environment variables (DB URI, port, etc.)
 ├── 📄 package-lock.json
 └── 📄 package.json
-
+```
 ---
 
 ## 🧠 How It Works
