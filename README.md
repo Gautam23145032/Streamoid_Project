@@ -143,7 +143,7 @@ Home page contains:
 
 🚀 Installation & Setup
 - Clone the repository
-git clone https://github.com/yourusername/streamoid-product.git
+git clone [https://github.com/yourusername/streamoid-product.git](https://github.com/Gautam23145032/Streamoid_Project)
 cd streamoid-product
 
 - Install dependencies
