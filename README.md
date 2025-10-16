@@ -8,7 +8,7 @@ A modern **Product Management Web App** built using **Node.js, Express, MongoDB,
 
 ### ✅ CSV Upload
 - Upload product CSV files with columns:
-sku, name, brand, color, size, mrp, price, quantity
+  `sku, name, brand, color, size, mrp, price, quantity`
 - Server validates each row:
   - Required fields: `sku`, `name`, `brand`, `mrp`, `price`
   - `price` must be ≤ `mrp`
@@ -96,27 +96,27 @@ sku, name, brand, color, size, mrp, price, quantity
 ## 🧠 How It Works
 
 ### 1️⃣ Uploading CSV
-1. User selects a CSV file and submits
-2. Multer middleware saves file temporarily in `uploads/`
-3. `csv-parser` reads file row by row
-4. Each row is validated by `csvValidator.js`
-5. Valid rows are inserted into MongoDB (`Product` collection)
-6. File is deleted after processing
+1. User selects a CSV file and submits  
+2. Multer middleware saves file temporarily in `uploads/`  
+3. `csv-parser` reads file row by row  
+4. Each row is validated by `csvValidator.js`  
+5. Valid rows are inserted into MongoDB (`Product` collection)  
+6. File is deleted after processing  
 7. Page renders:
    - Number of successful inserts
    - Failed rows with reasons
    - Updated product list
 
 ### 2️⃣ Searching & Filtering Products
-1. User enters filters: brand, color, minPrice, maxPrice
-2. `handleSearch()` builds a MongoDB query with regex (case-insensitive) and price range
+1. User enters filters: brand, color, minPrice, maxPrice  
+2. `handleSearch()` builds a MongoDB query with regex (case-insensitive) and price range  
 3. Results are sorted by newest first and rendered in the table
 
 ### 3️⃣ Error Handling
-- Non-CSV uploads → Error message displayed
-- File size > 5MB → Error message displayed
-- Duplicate SKUs or invalid rows → Skipped with error shown
-- 404 routes → `notFound()` middleware
+- Non-CSV uploads → Error message displayed  
+- File size > 5MB → Error message displayed  
+- Duplicate SKUs or invalid rows → Skipped with error shown  
+- 404 routes → `notFound()` middleware  
 - Other errors → `errorHandler()` middleware logs and returns JSON
 
 ---
@@ -128,6 +128,7 @@ sku,name,brand,color,size,mrp,price,quantity
 SKU123,Running Shoes,Nike,Black,42,5999,4999,10
 SKU124,T-Shirt,Adidas,White,L,1999,1499,20
 SKU125,Jeans,Levis,Blue,32,3999,2999,15
+
 🌐 User Interface
 Home page contains:
 
