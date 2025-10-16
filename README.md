@@ -8,7 +8,7 @@ A modern **Product Management Web App** built using **Node.js, Express, MongoDB,
 
 ### ✅ CSV Upload
 - Upload product CSV files with columns:
-sku,name,brand,color,size,mrp,price,quantity
+sku, name, brand, color, size, mrp, price, quantity
 - Server validates each row:
   - Required fields: `sku`, `name`, `brand`, `mrp`, `price`
   - `price` must be ≤ `mrp`
@@ -55,26 +55,26 @@ sku,name,brand,color,size,mrp,price,quantity
 
 📦 streamoid-product-manager
 ├── 📁 config
-│ └── db.js # MongoDB connection logic
+│ └── db.js   # MongoDB connection logic
 ├── 📁 controllers
-│ └── viewController.js # Handles CSV upload, validation, search, rendering
+│ └── viewController.js   # Handles CSV upload, validation, search, rendering
 ├── 📁 middleware
-│ ├── errorMiddleware.js # 404 + global error handlers
+│ ├── errorMiddleware.js   # 404 + global error handlers
 │ └── upload.js # Multer config for CSV upload
 ├── 📁 models
-│ └── productModel.js # Product schema definition (Mongoose)
+│ └── productModel.js   # Product schema definition (Mongoose)
 ├── 📁 routes
-│ └── viewRoutes.js # Routes for upload, search, and render
+│ └── viewRoutes.js   # Routes for upload, search, and render
 ├── 📁 utils
-│ └── csvValidator.js # Validates each CSV row before insertion
+│ └── csvValidator.js   # Validates each CSV row before insertion
 ├── 📁 views
-│ └── home.ejs # EJS view for upload + search + listing UI
+│ └── home.ejs   # EJS view for upload + search + listing UI
 ├── 📁 public
-│ └── style.css # Styling for UI
-├── 📁 uploads # Temporary folder for uploaded CSVs (auto-deleted)
-├── app.js # Express app setup
-├── server.js # App entrypoint (loads env, connects DB, starts server)
-├── .env # Contains MONGODB_URI and PORT
+│ └── style.css   # Styling for UI
+├── 📁 uploads   # Temporary folder for uploaded CSVs (auto-deleted)
+├── app.js   # Express app setup
+├── server.js   # App entrypoint (loads env, connects DB, starts server)
+├── .env   # Contains MONGODB_URI and PORT
 └── package.json
 
 ---
